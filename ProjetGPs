@@ -8,9 +8,9 @@ class gestion{
 
         try
         {
-            $maBase=new PDO('mysql:host=localhost; dbname=admin;
+            $maBase=new PDO('mysql:host=localhost; dbname=projet gps;
             charset=utf8','root', '');
-            $maBase->query('SELECT * FROM `admin`');   
+            $maBase->query('SELECT * FROM `user`');   
         }    
             catch (Exception $erreur){
                 echo 'Erreur : '.$erreur ->getMessage();
@@ -21,8 +21,8 @@ class gestion{
 
         try
         {
-            $maBase=new PDO('mysql:host=localhost; dbname=admin;charset=utf8','root', '');
-            $maBase->query('DELETE FROM `admin` WHERE `id_admin`="'.$delete.'"');
+            $maBase=new PDO('mysql:host=localhost; dbname=proget gps;charset=utf8','root', '');
+            $maBase->query('DELETE FROM `user` WHERE `id_user`="'.$delete.'"');
         }    
             catch (Exception $erreur){
                 echo 'Erreur : '.$erreur ->getMessage();
@@ -33,7 +33,7 @@ class gestion{
     public function update($user, $mdp) //mise à jour 
     {
         try{
-            $BDD = new PDO('mysql:host=localhost; dbname=admin;
+            $BDD = new PDO('mysql:host=localhost; dbname=projet gps;
             charset=utf8','root', '');
             $BDD ->query('UPDATE `admin` SET `motdepasse`="'.$mdp.'",`pseudo`="'.$user.);
            }
@@ -47,7 +47,7 @@ class gestion{
     
     {
         try{
-            $BDD = new PDO('mysql:host=localhost; dbname=admin;
+            $BDD = new PDO('mysql:host=localhost; dbname=projet gps;
             charset=utf8','root', '');
             $BDD ->query('INSERT INTO `projet gps`.`admin` (`idAdmin`, `user`, `mdp`)' );
             $BDD ->query('DELETE Users FROM Users WHERE `id_Users`  = ');
