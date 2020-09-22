@@ -1,0 +1,25 @@
+<?php
+class admin{
+
+    public $_admin;
+  
+
+function etreadmin($admin)
+{
+try
+
+    $maBase=new PDO('mysql:host=localhost; dbname=projet GPS;charset=utf8','root', '');
+    
+}    
+$req=$bdd->prepare('SELECT `` FROM `user`');
+$req->execute(array('Admin'=>$admin));
+
+if ($admin==1)
+{
+$_SESSION=TRUE    
+}
+
+}
+
+
+?>
