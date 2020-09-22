@@ -1,0 +1,18 @@
+
+<?php
+try {
+$bdd = new PDO('mysql:host=localhost;dbname=projet gps', '', '');
+ }
+ catch (Exception $e) {
+die('Erreur : ' . $e->getMessage());
+}
+session_start();
+if ($_POST['mdp']==$_POST['mdpConfirm'])
+{+
+$pass_hache=sha1($_POST['pass']);
+$req = $bdd->prepare('UPDATE user SET mdp=? WHERE user = ?');
+$req->execute(array(
+$pass_hache,
+$_SESSION['user']
+));
+ ?>
